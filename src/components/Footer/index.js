@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { DribbbleIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "../Icons";
+import { LinkedinIcon } from "../Icons";
 import Link from "next/link";
 import siteMetadata from "@/src/utils/siteMetaData";
 
@@ -40,48 +40,19 @@ const Footer = () => {
           className="bg-dark text-light dark:text-dark dark:bg-light cursor-pointer font-medium rounded px-3 sm:px-5 py-1"
         />
       </form>
-      <div className="flex items-center mt-8">
-        <a
-          href={siteMetadata.linkedin}
-          className="inline-block w-6 h-6 mr-4"
-          aria-label="Reach out to me via LinkedIn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <LinkedinIcon className="hover:scale-125 transition-all ease duration-200" />
+      {/* Social Icons */}
+      <div className="flex items-center justify-center mt-4">
+        <a href={siteMetadata.linkedin} rel="noopener noreferrer" className="inline-block w-6 h-6 mr-4" aria-label="LinkedIn" target="_blank">
+          <LinkedinIcon className="hover:scale-125 transition-all ease duration-200 dark:fill-light" />
         </a>
-        <a
-          href={siteMetadata.twitter}
-          className="inline-block w-6 h-6 mr-4"
-          aria-label="Reach out to me via Twitter"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <TwitterIcon className="hover:scale-125 transition-all ease duration-200" />
-        </a>
-        <a
-          href={siteMetadata.github}
-          className="inline-block w-6 h-6 mr-4 fill-light"
-          aria-label="Check my profile on Github"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GithubIcon className="fill-light dark:fill-dark  hover:scale-125 transition-all ease duration-200" />
-        </a>
-        <a
-          href={siteMetadata.dribbble}
-          className="inline-block w-6 h-6 mr-4"
-          aria-label="Check my profile on Dribbble"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <DribbbleIcon className="hover:scale-125 transition-all ease duration-200" />
+        <a href={siteMetadata.instagram} rel="noopener noreferrer" className="inline-block w-6 h-6" aria-label="Instagram" target="_blank">
+          <svg className="w-full h-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><rect width="20" height="20" x="2" y="2" rx="6" stroke="currentColor" strokeWidth="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="1.5"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg>
         </a>
       </div>
 
       <div className="w-full  mt-16 md:mt-24 relative font-medium border-t border-solid border-light py-6 px-8 flex  flex-col md:flex-row items-center justify-between">
         <span className="text-center">
-          &copy;2023 CodeBucks. All rights reserved.
+          &copy;2023 ments. All rights reserved.
         </span>
         <Link
           href="/sitemap.xml"
@@ -92,7 +63,7 @@ const Footer = () => {
         <div className="text-center">
           Made with &hearts; by{" "}
           <a href="https://devdreaming.com" className="underline" target="_blank">
-            CodeBucks
+            ments
           </a>
         </div>
       </div>
