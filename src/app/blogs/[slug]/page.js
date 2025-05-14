@@ -33,7 +33,7 @@ export async function generateMetadata({ params }) {
   });
 
   const authors = blog?.author ? [blog.author] : siteMetadata.author;
-
+  
   return {
     title: blog.title,
     description: blog.description,
@@ -143,6 +143,7 @@ export default async function BlogPage({ params }) {
           >
             {blog.title}
           </h1>
+          <BlogDetails blog={blog} slug={params.slug} />
         </div>
         <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/60 dark:bg-dark/40" />
         <Image
@@ -157,7 +158,6 @@ export default async function BlogPage({ params }) {
           sizes="100vw"
         />
       </div>
-      <BlogDetails blog={blog} slug={params.slug} />
 
       <div className="grid grid-cols-12  gap-y-8 lg:gap-8 sxl:gap-16 mt-8 px-5 md:px-10">
         <div className="col-span-12  lg:col-span-4">

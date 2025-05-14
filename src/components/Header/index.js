@@ -89,8 +89,35 @@ const Header = () => {
         <a href={siteMetadata.linkedin} rel="noopener noreferrer" className="inline-block w-6 h-6 mr-4" aria-label="LinkedIn" target="_blank">
           <LinkedinIcon className="hover:scale-125 transition-all ease duration-200 dark:fill-light" />
         </a>
-        <a href={siteMetadata.instagram} rel="noopener noreferrer" className="inline-block w-6 h-6 mr-4" aria-label="Instagram" target="_blank">
-          <svg className="w-full h-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5"><rect width="20" height="20" x="2" y="2" rx="6" stroke="currentColor" strokeWidth="1.5" /><circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="1.5" /><circle cx="17" cy="7" r="1" fill="currentColor" /></svg>
+        <a
+          href={siteMetadata.instagram}
+          rel="noopener noreferrer"
+          className="inline-block w-8 h-8 mr-4 relative"
+          aria-label="Instagram"
+          target="_blank"
+        >
+          {/* Blue glow circle */}
+          <span className="absolute inset-0 flex items-center justify-center">
+            <span className="w-8 h-8 rounded-full bg-blue-400/20 blur-[2px]"></span>
+          </span>
+          {/* Instagram icon with gradient */}
+          <svg
+            className="w-full h-full relative z-10"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="url(#insta-gradient)"
+            strokeWidth="1.5"
+          >
+            <defs>
+              <linearGradient id="insta-gradient" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#00FFA3" />
+                <stop offset="1" stopColor="#00FFFF" />
+              </linearGradient>
+            </defs>
+            <rect width="20" height="20" x="2" y="2" rx="6" stroke="url(#insta-gradient)" strokeWidth="1.5" />
+            <circle cx="12" cy="12" r="5" stroke="url(#insta-gradient)" strokeWidth="1.5" />
+            <circle cx="17" cy="7" r="1" fill="url(#insta-gradient)" />
+          </svg>
         </a>
       </div>
     </header>
